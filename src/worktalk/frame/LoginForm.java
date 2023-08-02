@@ -44,14 +44,16 @@ public class LoginForm extends JFrame{
 		p_west=new JPanel();
 		p_east=new JPanel();
 		
+		p_center.setPreferredSize(new Dimension(100,40));
+		p_center.setBackground(Color.WHITE);
+		p_north.setPreferredSize(new Dimension(150,50));
+		p_north.setBackground(new Color(226,240,217));
+		p_south.setBackground(new Color(226,240,217));
+		p_west.setBackground(new Color(226,240,217));
+		p_east.setBackground(new Color(226,240,217));
 	
-		
 		p_north.add(la_title);
-		p_north.setPreferredSize(new Dimension(250,50));
-		
 		this.add(p_north,BorderLayout.NORTH);
-		p_north.setBackground(Color.GREEN);
-		
 		
 		p_center.add(la_subtitle);
 		p_center.add(la_id);
@@ -59,30 +61,20 @@ public class LoginForm extends JFrame{
 		p_center.add(la_pass);
 		p_center.add(t_pass);
 		p_center.add(bt_login);
-		
 		this.add(p_center,BorderLayout.CENTER);
-		p_center.setBackground(Color.WHITE);
-		
-		
 		
 		this.add(p_south,BorderLayout.SOUTH);
-		p_south.setBackground(Color.GREEN);
 		
 		this.add(p_west,BorderLayout.WEST);
-		p_west.setBackground(Color.GREEN);
 		
 		this.add(p_east,BorderLayout.EAST);
-		p_east.setBackground(Color.GREEN);
 	
-		
-		
-		
 		this.setSize(250,500);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 	
 	public static void main(String[] args) {
-		LoginForm form=new LoginForm();
+		new LoginForm();
 	}
 }
